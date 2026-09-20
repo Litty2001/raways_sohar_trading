@@ -1,0 +1,1326 @@
+.home-page {
+  --navy: #0b1420;
+  --navy-rgb: 11, 20, 32;
+  --blue: #24364d;
+  --peach: #f29a68;
+  --peach-light: #162337;
+  --teal: #d87845;
+  --amber: #f29a68;
+  --ink: #f5f5f2;
+  --muted: #b8c0ca;
+  --line: rgba(255, 255, 255, 0.12);
+  --surface: #101b29;
+  --white: #ffffff;
+  --shadow: 0 18px 44px rgba(var(--navy-rgb), 0.12);
+  --section-pad: 104px 0;
+  
+  display: block;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: "Manrope", "Segoe UI", Arial, sans-serif;
+}
+
+.home-page * {
+  box-sizing: border-box;
+}
+
+.home-page,
+.home-page a,
+.home-page button,
+.home-page input,
+.home-page select,
+.home-page textarea {
+  letter-spacing: 0;
+}
+
+.home-page .container {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.home-page .site-nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  min-height: 88px;
+  align-items: center;
+  padding: 0 52px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(4, 13, 28, 0.5);
+  backdrop-filter: blur(20px);
+}
+
+.home-page .nav-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.home-page .nav-menu-button {
+  display: none;
+}
+
+.home-page .nav-logo {
+  grid-column: 2;
+  grid-row: 1;
+  display: inline-flex;
+  align-items: center;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.home-page .logo-mark {
+  display: inline-flex;
+  width: clamp(138px, 12vw, 184px);
+  height: 72px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.home-page .logo-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home-page .nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2vw, 34px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-page .nav-menu-panel {
+  display: contents;
+}
+
+.home-page .nav-links-left {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+}
+
+.home-page .nav-links-right {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+}
+
+.home-page .nav-links a {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.home-page .nav-links a:hover {
+  color: var(--amber);
+}
+
+.home-page .nav-links .nav-cta,
+.home-page .nav-links .nav-cta:visited,
+.home-page .nav-links .nav-cta:focus,
+.home-page .nav-links .nav-cta:active {
+  margin-left: 18px;
+  padding: 0 20px;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+}
+
+.home-page .nav-links .nav-cta:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.home-page section {
+  padding: var(--section-pad);
+  border-bottom: 1px solid rgba(var(--navy-rgb), 0.1);
+}
+
+.home-page .hero-section {
+  position: relative;
+  min-height: max(680px, 100svh);
+  padding: 98px 0 34px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0d315d 0%, #061d40 100%);
+}
+
+.home-page .hero-video,
+.home-page .hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-page .hero-video {
+  z-index: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.home-page .hero-overlay {
+  z-index: 1;
+  background: linear-gradient(105deg, rgba(3, 21, 49, 0.86) 0%, rgba(3, 21, 49, 0.67) 52%, rgba(3, 21, 49, 0.42) 100%);
+}
+
+.home-page .hero-bg,
+.home-page .hero-grid-lines {
+  display: none;
+}
+
+.home-page .hero-layout,
+.home-page .about-grid,
+.home-page .contact-grid,
+.home-page .why-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 86px;
+  align-items: center;
+}
+
+.home-page .hero-layout,
+.home-page .hero-stats {
+  position: relative;
+  z-index: 2;
+}
+
+.home-page .hero-section .eyebrow {
+  color: var(--amber);
+}
+
+.home-page .hero-section .eyebrow::before {
+  background: var(--white);
+}
+
+.home-page .hero-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.home-page .hero-content,
+.home-page .about-text,
+.home-page .services-intro,
+.home-page .why-grid,
+.home-page .contact-grid {
+  position: relative;
+}
+
+.home-page .eyebrow,
+.home-page .section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.home-page .eyebrow::before,
+.home-page .section-tag::before {
+  content: "";
+  width: 42px;
+  height: 2px;
+  background: var(--navy);
+}
+
+.home-page .hero-title,
+.home-page .section-title,
+.home-page .why-title,
+.home-page .contact-info-title {
+  max-width: 980px;
+  margin: 0;
+  color: var(--navy);
+  font-weight: 900;
+  line-height: 0.98;
+}
+
+.home-page .hero-title {
+  max-width: none;
+  font-size: clamp(3.3rem, 6.3vw, 7rem);
+  color: var(--white);
+}
+
+.home-page .hero-title span {
+  display: block;
+}
+
+.home-page .hero-title-company {
+  white-space: nowrap;
+}
+
+.home-page .section-title {
+  font-size: clamp(2.5rem, 5.7vw, 5.7rem);
+}
+
+.home-page .hero-subtitle {
+  max-width: 540px;
+  margin: 28px 0 0;
+  color: #f5e7df;
+  font-size: 1.02rem;
+  line-height: 1.82;
+}
+
+.home-page .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.home-page .btn-primary,
+.home-page .btn-outline,
+.home-page .form-submit {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  border-radius: 0;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.home-page .btn-primary,
+.home-page .form-submit {
+  border: 1px solid var(--navy);
+  background: var(--navy);
+  color: var(--white);
+}
+
+.home-page .btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+}
+
+.home-page .btn-primary:hover,
+.home-page .btn-outline:hover,
+.home-page .form-submit:hover {
+  transform: translateY(-1px);
+}
+
+.home-page .btn-outline:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.home-page .hero-visual {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.home-page .visual-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-page .visual-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-page .hero-photo {
+  width: min(108%, 760px);
+  overflow: visible;
+}
+
+.home-page .hero-photo img {
+  height: auto;
+  object-fit: contain;
+  clip-path: inset(2px);
+}
+
+.home-page .hero-stats {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.home-page .stat-item {
+  min-height: 96px;
+  padding: 22px 26px;
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.home-page .stat-item:last-child {
+  border-right: 0;
+}
+
+.home-page .stat-num {
+  display: block;
+  color: var(--white);
+  font-size: 1.38rem;
+  font-weight: 900;
+}
+
+.home-page .stat-label {
+  display: block;
+  margin-top: 8px;
+  color: #f6d9ca;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.home-page .about-section,
+.home-page .services-section,
+.home-page .contact-section {
+  background: #fffaf7;
+}
+
+.home-page .gallery-section,
+.home-page .careers-section {
+  min-height: calc(100svh - 88px);
+  padding-top: 148px;
+  background: #fffaf7;
+}
+
+.home-page .gallery-intro {
+  max-width: 720px;
+  margin-bottom: 44px;
+}
+
+.home-page .gallery-intro p,
+.home-page .careers-copy p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.home-page .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-page .gallery-image {
+  position: relative;
+  min-height: 290px;
+  overflow: hidden;
+  background: var(--peach-light);
+}
+
+.home-page .gallery-image:nth-child(3n + 1) {
+  grid-row: span 2;
+  min-height: 598px;
+}
+
+.home-page .gallery-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.home-page .gallery-image:hover img {
+  transform: scale(1.04);
+}
+
+.home-page .careers-section {
+  display: flex;
+  align-items: center;
+  background: var(--navy);
+}
+
+.home-page .careers-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  gap: 84px;
+  align-items: end;
+}
+
+.home-page .careers-section .section-tag,
+.home-page .careers-section .section-title {
+  color: var(--white);
+}
+
+.home-page .careers-copy {
+  padding: 0 0 0 34px;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.home-page .careers-copy p {
+  margin: 0 0 30px;
+  color: #ffe3d3;
+}
+
+.home-page .about-grid {
+  grid-template-columns: minmax(420px, 0.86fr) minmax(0, 1.14fr);
+  align-items: stretch;
+}
+
+.home-page .about-visual {
+  min-height: 640px;
+}
+
+.home-page .about-photo {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--line);
+  background: var(--peach-light);
+}
+
+.home-page .about-photo img {
+  padding: 34px;
+  object-fit: contain;
+}
+
+.home-page .gold-divider {
+  width: 100%;
+  height: 1px;
+  margin: 34px 0;
+  background: rgba(var(--navy-rgb), 0.18);
+}
+
+.home-page .about-text p,
+.home-page .services-intro p,
+.home-page .why-desc,
+.home-page .contact-info-desc {
+  color: #536b88;
+  font-size: 1rem;
+  line-height: 1.84;
+}
+
+.home-page .about-pillars,
+.home-page .products-grid,
+.home-page .services-list {
+  display: grid;
+}
+
+.home-page .about-pillars {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin-top: 34px;
+  border-top: 1px solid var(--line);
+}
+
+.home-page .pillar {
+  padding: 24px 22px 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-page .pillar-icon,
+.home-page .service-num,
+.home-page .why-item-num,
+.home-page .product-index {
+  display: inline-flex;
+  color: var(--teal);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.home-page .pillar-title,
+.home-page .product-name,
+.home-page .service-title,
+.home-page .why-item-title {
+  margin: 16px 0 8px;
+  color: var(--navy);
+  font-size: 1.25rem;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.home-page .pillar-desc,
+.home-page .product-desc,
+.home-page .service-desc,
+.home-page .why-item-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.home-page .products-section {
+  background: var(--surface);
+}
+
+.home-page .split-header {
+  display: flex;
+  gap: 32px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(var(--navy-rgb), 0.16);
+}
+
+.home-page .products-grid,
+.home-page .services-list {
+  gap: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-left: 1px solid var(--line);
+}
+
+.home-page .product-card,
+.home-page .service-item {
+  position: relative;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+}
+
+.home-page .product-card {
+  min-height: 430px;
+  padding: 34px 28px 30px;
+}
+
+.home-page .product-index {
+  position: absolute;
+  top: 34px;
+  right: 28px;
+  color: var(--navy);
+}
+
+.home-page .product-icon {
+  position: relative;
+  display: flex;
+  width: 138px;
+  height: 122px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 24px;
+}
+
+.home-page .product-icon::before {
+  content: "";
+  position: absolute;
+  inset: 18px 4px 2px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.86), transparent 60%);
+}
+
+.home-page .product-icon img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 132px;
+  height: 116px;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 22px rgba(var(--navy-rgb), 0.16));
+}
+
+.home-page .supply-icon img {
+  width: 122px;
+}
+
+.home-page .contract-icon img,
+.home-page .electrical-icon img {
+  width: 136px;
+}
+
+.home-page .logistics-icon img {
+  width: 146px;
+}
+
+.home-page .product-cat {
+  display: block;
+  min-height: 34px;
+  color: var(--teal);
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.home-page .product-name {
+  margin-top: 14px;
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+}
+
+.home-page .product-list {
+  display: grid;
+  gap: 0;
+  margin: 24px 0 0;
+  padding: 0;
+  color: var(--ink);
+  font-size: 0.88rem;
+  line-height: 1.45;
+  list-style: none;
+}
+
+.home-page .product-list li {
+  padding: 10px 0 0;
+  border-top: 1px solid rgba(var(--navy-rgb), 0.12);
+}
+
+.home-page .product-list li + li {
+  margin-top: 10px;
+}
+
+.home-page .services-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.62fr);
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(var(--navy-rgb), 0.16);
+}
+
+.home-page .services-intro .section-title {
+  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
+}
+
+.home-page .services-intro p {
+  padding: 28px 0 0 28px;
+  border-left: 1px solid var(--line);
+}
+
+.home-page .service-item {
+  padding: 30px 24px;
+}
+
+.home-page .service-num {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.home-page .why-section {
+  background: var(--navy);
+}
+
+.home-page .why-grid {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+}
+
+.home-page .why-section .section-tag,
+.home-page .why-title {
+  color: var(--white);
+}
+
+.home-page .why-title {
+  font-size: clamp(2.3rem, 4.5vw, 4rem);
+}
+
+.home-page .why-desc {
+  max-width: 560px;
+  color: #ffe3d3;
+}
+
+.home-page .why-items {
+  display: grid;
+  gap: 0;
+}
+
+.home-page .why-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.home-page .why-item-num {
+  color: var(--amber);
+}
+
+.home-page .why-item-title {
+  margin: 0 0 6px;
+  color: var(--white);
+}
+
+.home-page .why-item-desc {
+  color: #ffe3d3;
+}
+
+.home-page .contact-grid {
+  align-items: start;
+}
+
+.home-page .contact-info-title {
+  font-size: clamp(2.1rem, 4vw, 3.4rem);
+}
+
+.home-page .contact-info-desc {
+  margin: 22px 0 34px;
+}
+
+.home-page .contact-details {
+  display: grid;
+  gap: 18px;
+}
+
+.home-page .contact-detail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.home-page .contact-detail-icon {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  color: var(--teal);
+  font-weight: 900;
+}
+
+.home-page .contact-detail-label {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.home-page .contact-detail-value {
+  margin-top: 4px;
+  color: var(--navy);
+  font-weight: 750;
+}
+
+.home-page .contact-form-wrap {
+  padding: 36px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.home-page .form-title {
+  margin: 0 0 26px;
+  color: var(--navy);
+  font-size: 1.55rem;
+  font-weight: 850;
+}
+
+.home-page .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.home-page .form-group {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.home-page .form-group label {
+  color: #526a87;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.home-page .form-group input,
+.home-page .form-group select,
+.home-page .form-group textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: #fffaf7;
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-page .form-group input:focus,
+.home-page .form-group select:focus,
+.home-page .form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(255, 157, 108, 0.24);
+}
+
+.home-page .form-group textarea {
+  min-height: 126px;
+  resize: vertical;
+}
+
+.home-page .form-submit {
+  width: 100%;
+}
+
+.home-page .site-footer {
+  padding: 62px 0 28px;
+  background: #041f48;
+  color: var(--white);
+}
+
+.home-page .footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: 54px;
+}
+
+.home-page .footer-logo {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.home-page .footer-tagline {
+  max-width: 380px;
+  margin: 0;
+  color: #ffd8c5;
+  line-height: 1.7;
+}
+
+.home-page .footer-col-title {
+  margin-bottom: 16px;
+  color: var(--amber);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.home-page .footer-links {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-page .footer-links a {
+  color: #ffe9de;
+  text-decoration: none;
+}
+
+.home-page .footer-links a:hover {
+  color: var(--white);
+}
+
+.home-page .footer-bottom {
+  margin-top: 46px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.home-page .footer-copy {
+  color: #ffcdb5;
+  font-size: 0.88rem;
+}
+
+/* Corporate dark theme overrides for the public-facing sections. */
+.home-page .about-section,
+.home-page .services-section,
+.home-page .contact-section,
+.home-page .gallery-section {
+  background: #101b29;
+}
+
+.home-page .products-section {
+  background: #162337;
+}
+
+.home-page .section-title,
+.home-page .contact-info-title,
+.home-page .pillar-title,
+.home-page .product-name,
+.home-page .service-title,
+.home-page .contact-detail-value,
+.home-page .form-title {
+  color: var(--white);
+}
+
+.home-page .about-text p,
+.home-page .services-intro p,
+.home-page .contact-info-desc,
+.home-page .gallery-intro p {
+  color: var(--muted);
+}
+
+.home-page .about-photo,
+.home-page .gallery-image,
+.home-page .contact-form-wrap {
+  background: #162337;
+}
+
+.home-page .product-card,
+.home-page .service-item {
+  background: rgba(11, 20, 32, 0.22);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.home-page .product-card:hover,
+.home-page .service-item:hover {
+  border-color: var(--teal);
+  background: rgba(11, 20, 32, 0.5);
+  transform: translateY(-4px);
+}
+
+.home-page .product-list,
+.home-page .form-group input,
+.home-page .form-group select,
+.home-page .form-group textarea {
+  color: var(--white);
+}
+
+.home-page .form-group label {
+  color: var(--muted);
+}
+
+.home-page .form-group input,
+.home-page .form-group select,
+.home-page .form-group textarea {
+  background: #0b1420;
+}
+
+.home-page .site-footer {
+  background: #0b1420;
+}
+
+@media (max-width: 1180px) {
+  .home-page .products-grid,
+  .home-page .services-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 980px) {
+  .home-page {
+    --section-pad: 78px 0;
+  }
+
+  .home-page .site-nav {
+    display: flex;
+    min-height: 72px;
+    padding: 0 24px;
+  }
+
+  .home-page .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .home-page .nav-menu-button {
+    position: relative;
+    z-index: 22;
+    display: inline-flex;
+    width: 46px;
+    height: 46px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.48);
+    background: rgba(4, 13, 28, 0.48);
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .home-page .nav-menu-button span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--white);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .home-page .nav-menu-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 24px;
+    right: 24px;
+    display: grid;
+    gap: 6px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+
+  .home-page .nav-menu-panel .nav-links {
+    position: static;
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .home-page .nav-links a {
+    width: 100%;
+    min-height: 44px;
+    justify-content: flex-start;
+  }
+
+  .home-page .nav-links .nav-cta {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .home-page .nav-toggle:checked ~ .nav-menu-button span:first-child {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .home-page .nav-toggle:checked ~ .nav-menu-button span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .home-page .nav-toggle:checked ~ .nav-menu-button span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .home-page .nav-toggle:checked ~ .nav-menu-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .home-page .hero-section {
+    min-height: max(640px, 100svh);
+    padding-top: 96px;
+  }
+
+  .home-page .hero-layout,
+  .home-page .about-grid,
+  .home-page .services-intro,
+  .home-page .why-grid,
+  .home-page .contact-grid,
+  .home-page .careers-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .home-page .careers-copy {
+    padding: 28px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-left: 0;
+  }
+
+  .home-page .hero-visual {
+    min-height: 420px;
+  }
+
+  .home-page .hero-stats,
+  .home-page .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-page .split-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page {
+    --section-pad: 64px 0;
+  }
+
+  .home-page .container {
+    width: min(100% - 28px, 1160px);
+  }
+
+  .home-page .site-nav {
+    padding: 0 16px;
+  }
+
+  .home-page .logo-mark {
+    width: 130px;
+    height: 54px;
+  }
+
+  .home-page .nav-menu-panel {
+    left: 16px;
+    right: 16px;
+  }
+
+  .home-page .hero-title {
+    font-size: clamp(2.55rem, 12vw, 4rem);
+  }
+
+  .home-page .gallery-section,
+  .home-page .careers-section {
+    min-height: calc(100svh - 72px);
+    padding-top: 126px;
+  }
+
+  .home-page .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page .gallery-image,
+  .home-page .gallery-image:nth-child(3n + 1) {
+    grid-row: auto;
+    min-height: 240px;
+  }
+
+  .home-page .section-title,
+  .home-page .why-title,
+  .home-page .contact-info-title {
+    font-size: clamp(2.1rem, 11vw, 3.4rem);
+  }
+
+  .home-page .hero-actions,
+  .home-page .hero-actions a {
+    width: 100%;
+  }
+
+  .home-page .hero-photo {
+    width: min(108%, 400px);
+  }
+
+  .home-page .hero-stats,
+  .home-page .about-pillars,
+  .home-page .products-grid,
+  .home-page .services-list,
+  .home-page .footer-grid,
+  .home-page .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page .stat-item {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid rgba(var(--navy-rgb), 0.14);
+  }
+
+  .home-page .about-visual {
+    min-height: 0;
+  }
+
+  .home-page .about-photo {
+    height: 420px;
+  }
+
+  .home-page .product-card {
+    min-height: auto;
+  }
+
+  .home-page .contact-form-wrap {
+    padding: 24px;
+  }
+}
+
+/* -----------------------------------------------------------------------
+ * Ported from Angular's global src/styles.scss.
+ * These rules were originally written as `app-home ...` (an unencapsulated,
+ * app-wide override targeting the <app-home> host element). Rescoped here to
+ * `.home-page` to match this file's scoping convention.
+ *
+ * NOTE: some of these selectors (`.project-frame`, `.hero-card`, `.crane-line`)
+ * do not correspond to any element in the current markup -- they appear to be
+ * leftover/dead rules from an earlier version of the design. Ported verbatim
+ * per migration instructions (preserve, don't omit); they are currently inert.
+ * ----------------------------------------------------------------------- */
+/* You can add global styles to this file, and also import other style files */
+
+.home-page * {
+  min-width: 0;
+}
+
+.home-page .hero-title,
+.home-page .section-title,
+.home-page .why-title,
+.home-page .contact-info-title,
+.home-page .product-name,
+.home-page .service-title,
+.home-page .why-item-title,
+.home-page .contact-detail-value,
+.home-page .footer-logo {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 980px) {
+  .home-page .project-frame {
+    right: 0;
+    width: min(100%, 430px);
+  }
+
+  .home-page .hero-card {
+    left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page .eyebrow,
+  .home-page .section-tag {
+    align-items: flex-start;
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .home-page .eyebrow::before,
+  .home-page .section-tag::before {
+    flex: 0 0 28px;
+    margin-top: 0.42em;
+  }
+
+  .home-page .section-title,
+  .home-page .contact-info-title {
+    font-size: clamp(1.9rem, 9vw, 2.6rem);
+  }
+
+  .home-page .why-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .home-page .hero-visual {
+    min-height: 310px;
+  }
+
+  .home-page .crane-line {
+    right: 8px;
+    width: min(190px, calc(100% - 42px));
+    height: 130px;
+  }
+
+  .home-page .hero-card strong {
+    font-size: 1.42rem;
+  }
+
+  .home-page .stat-item {
+    padding: 20px;
+  }
+
+  .home-page .product-card,
+  .home-page .service-item,
+  .home-page .pillar,
+  .home-page .why-item {
+    padding: 22px;
+  }
+
+  .home-page .why-item {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

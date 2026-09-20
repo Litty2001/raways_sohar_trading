@@ -1,0 +1,17 @@
+/* Global, site-wide styles.
+   Mirrors the non-component-scoped rules from the Angular project's src/styles.scss.
+   Page/section-specific rules live in components/home/home.scss, scoped under `.home-page`
+   the same way the Angular version scoped them under the `app-home` element selector. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
