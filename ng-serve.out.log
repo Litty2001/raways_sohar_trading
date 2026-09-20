@@ -1,0 +1,223 @@
+
+> rawaya-solar@0.0.0 start
+> ng serve --host 127.0.0.1 --port 4200
+
+> Building...
+√ Building...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+main.js              | main             | 100.80 kB | 
+styles.css           | styles           |   1.46 kB | 
+
+                     | Initial total    | 102.27 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      | 102.55 kB | 
+server.mjs           | server           |   1.84 kB | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Application bundle generation complete. [3.135 seconds] - 2026-09-13T07:34:44.768Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m4200[22m/[39m
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        | 101.05 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server | 102.79 kB | 
+
+Application bundle generation complete. [0.599 seconds] - 2026-09-13T07:36:12.277Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        | 101.34 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server | 103.09 kB | 
+
+Application bundle generation complete. [1.261 seconds] - 2026-09-13T07:38:52.002Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        | 101.32 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server | 103.07 kB | 
+
+Application bundle generation complete. [3.056 seconds] - 2026-09-13T07:38:55.985Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        | 101.63 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server | 103.38 kB | 
+
+Application bundle generation complete. [0.505 seconds] - 2026-09-13T07:46:14.733Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        | 101.75 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server | 103.50 kB | 
+
+Application bundle generation complete. [1.682 seconds] - 2026-09-13T07:46:16.994Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        | 102.04 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server | 103.79 kB | 
+
+Application bundle generation complete. [1.293 seconds] - 2026-09-13T07:47:37.044Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        | 101.73 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server | 103.48 kB | 
+
+Application bundle generation complete. [1.256 seconds] - 2026-09-13T07:47:39.757Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+main.js              | main             | 101.73 kB | 
+styles.css           | styles           |   1.46 kB | 
+
+                     | Initial total    | 103.19 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      | 103.48 kB | 
+server.mjs           | server           |   1.84 kB | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Application bundle generation complete. [0.009 seconds] - 2026-09-13T08:01:52.874Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+main.js              | main             | 101.73 kB | 
+styles.css           | styles           |   1.46 kB | 
+
+                     | Initial total    | 103.19 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      | 103.48 kB | 
+server.mjs           | server           |   1.84 kB | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Application bundle generation complete. [0.009 seconds] - 2026-09-13T08:02:17.040Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size
+main.js              | main             | 101.73 kB | 
+styles.css           | styles           |   1.46 kB | 
+
+                     | Initial total    | 103.19 kB
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+main.server.mjs      | main.server      | 103.48 kB | 
+server.mjs           | server           |   1.84 kB | 
+polyfills.server.mjs | polyfills.server | 268 bytes | 
+
+Application bundle generation complete. [0.008 seconds] - 2026-09-13T08:02:35.685Z
+
+Page reload sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        | 100.80 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server | 102.55 kB | 
+
+Application bundle generation complete. [0.455 seconds] - 2026-09-13T08:03:15.146Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       |  Raw size
+main.js             | main        | 120.77 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       |  Raw size
+main.server.mjs     | main.server | 122.52 kB | 
+
+Application bundle generation complete. [0.386 seconds] - 2026-09-13T08:07:53.764Z
+
+Component update sent to client(s).
+> Changes detected. Rebuilding...
+√ Changes detected. Rebuilding...
+Browser bundles    
+Initial chunk files | Names       | Raw size
+main.js             | main        |  4.84 kB | 
+
+
+Server bundles     
+Initial chunk files | Names       | Raw size
+main.server.mjs     | main.server |  6.10 kB | 
+
+Application bundle generation complete. [0.188 seconds] - 2026-09-13T08:10:06.882Z
+
+[2m1:40:21 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32m✨ new dependencies optimized: [33mtslib[32m[39m
+[2m1:40:21 pm[22m [36m[1m[vite][22m[39m [34m[2m(ssr)[22m[39m [32m✨ optimized dependencies changed. reloading[39m

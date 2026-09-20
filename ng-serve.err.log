@@ -1,0 +1,39 @@
+[2m1:40:21 pm[22m [31m[1m[vite][22m[39m [31m[2m(ssr)[22m[39m [31mError when evaluating SSR module /main.server.mjs?timestamp=1789287006885: There is a new version of the pre-bundle for "C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/.angular/cache/22.0.3/rawaya-solar/vite/deps_ssr/@angular_core.js?v=456e18cb", a page reload is going to ask for it.[39m
+      at throwOutdatedRequest (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:8975:32)
+      at LoadPluginContext.load (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:8946:118)
+      at EnvironmentPluginContainer.load (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:28839:56)
+      at loadAndTransform (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:22704:43)
+      at doTransform (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:22673:17)
+      at async fetchModule (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:34073:15)
+      at async handleInvoke (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:25913:21)
+      at async EventEmitter.listenerForInvokeHandler (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:25968:13)
+An unhandled exception occurred: There is a new version of the pre-bundle for "C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/.angular/cache/22.0.3/rawaya-solar/vite/deps_ssr/@angular_core.js?v=456e18cb", a page reload is going to ask for it.
+See "C:\Users\mariy\AppData\Local\Temp\ng-ZRylnP\angular-errors.log" for further details.
+C:\Users\mariy\OneDrive\Desktop\rawaya-solar-project\rawaya-solar\node_modules\rxjs\dist\cjs\internal\util\reportUnhandledError.js:13
+            throw err;
+            ^
+
+Error: There is a new version of the pre-bundle for "C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/.angular/cache/22.0.3/rawaya-solar/vite/deps_ssr/@angular_core.js?v=456e18cb", a page reload is going to ask for it.
+    at throwOutdatedRequest (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:8975:32)
+    at LoadPluginContext.load (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:8946:118)
+    at EnvironmentPluginContainer.load (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:28839:56)
+    at loadAndTransform (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:22704:43)
+    at doTransform (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:22673:17)
+    at async fetchModule (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:34073:15)
+    at async handleInvoke (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:25913:21)
+    at async EventEmitter.listenerForInvokeHandler (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:25968:13) {
+  code: 'ERR_OUTDATED_OPTIMIZED_DEP',
+  runnerError: Error: RunnerError
+      at reviveInvokeError (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/module-runner.js:476:64)
+      at Object.invoke (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/module-runner.js:549:11)
+      at async SSRCompatModuleRunner.getModuleInformation (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/module-runner.js:1086:7)
+      at async request (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/module-runner.js:1103:83)
+      at async eval (C:\Users\mariy\OneDrive\Desktop\rawaya-solar-project\rawaya-solar\src\app\home\home.ts:1:1)
+      at async ESModulesEvaluator.runInlinedModule (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/module-runner.js:913:3)
+      at async SSRCompatModuleRunner.directRequest (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/module-runner.js:1146:59)
+      at async SSRCompatModuleRunner.directRequest (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/chunks/config.js:15184:22)
+      at async SSRCompatModuleRunner.cachedRequest (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/module-runner.js:1053:73)
+      at async SSRCompatModuleRunner.import (file:///C:/Users/mariy/OneDrive/Desktop/rawaya-solar-project/rawaya-solar/node_modules/vite/dist/node/module-runner.js:1014:10)
+}
+
+Node.js v24.15.0
