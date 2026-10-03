@@ -1885,3 +1885,94 @@
     box-shadow: 0 0 0 8px rgba(21, 86, 201, 0.18), 0 22px 48px rgba(var(--navy-rgb), 0.14);
   }
 }
+
+/* ---------- Responsive refinements (phone / tablet) ---------- */
+
+/* First section under the fixed header: clear the header plus breathing room. */
+.home-page .site-nav + section:not(.hero-section) {
+  padding-top: calc(92px + 56px);
+}
+
+/* Center hero content vertically so tall tablet screens don't leave a gap below. */
+.home-page .hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 56px;
+}
+
+@media (max-width: 980px) {
+  .home-page .site-nav + section:not(.hero-section) {
+    padding-top: calc(72px + 44px);
+  }
+
+  .home-page .hero-section {
+    padding-top: 104px;
+  }
+
+  /* Tablet: four stats in a 2x2 grid read better than a cramped single row. */
+  .home-page .stat-item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .home-page .stat-item:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  }
+}
+
+@media (max-width: 640px) {
+  .home-page .site-nav + section:not(.hero-section) {
+    padding-top: calc(72px + 36px);
+  }
+
+  /* Footer: brand full width, link columns side by side to halve the length. */
+  .home-page .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 20px;
+  }
+
+  .home-page .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .home-page .footer-logo {
+    width: 132px;
+  }
+
+  .home-page .stat-item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .home-page .hero-stats .stat-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  }
+}
+
+/* Mobile menu: one clean stacked list on a solid panel. */
+@media (max-width: 980px) {
+  .home-page .nav-menu-panel {
+    z-index: 30;
+    gap: 0;
+    padding: 8px 20px;
+    background: var(--white);
+    box-shadow: 0 24px 48px rgba(6, 24, 66, 0.18);
+  }
+
+  .home-page .nav-menu-panel .nav-links-left,
+  .home-page .nav-menu-panel .nav-links-right {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: stretch;
+    gap: 0;
+  }
+
+  .home-page .nav-menu-panel .nav-links li + li,
+  .home-page .nav-menu-panel .nav-links-right li:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  .home-page .nav-menu-panel .nav-links a {
+    min-height: 52px;
+  }
+}
