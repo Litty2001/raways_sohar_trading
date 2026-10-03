@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Rawaya Sohar Global is a premier Omani enterprise specializing in multi-sector import, export, distribution, and contracting services across food, construction, and energy sectors.",
   icons: {
-    icon: "/assets/rsg-logo.png",
+    icon: "/favicon.ico",
     apple: "/assets/rsg-logo.png",
   },
   openGraph: {
