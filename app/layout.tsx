@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+
+const bodyFont = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
+const displayFont = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-display", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.rawayasohar.com"),
-  title: "RawayaSolar",
+  title: "Rawaya Sohar Global",
   description:
     "Rawaya Sohar Global is a premier Omani enterprise specializing in multi-sector import, export, distribution, and contracting services across food, construction, and energy sectors.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/assets/rsg-logo.png",
+    apple: "/assets/rsg-logo.png",
   },
   openGraph: {
     title: "Rawaya Sohar Global",
@@ -25,17 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        {/* Preserved verbatim from the Angular src/index.html <head>.
-            Note: these two font families are loaded by the original site but are not
-            currently referenced by any selector in home.scss (which uses `Inter`).
-            Kept here for parity with the source of truth. */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${bodyFont.variable} ${displayFont.variable}`}>
       <body>{children}</body>
     </html>
   );

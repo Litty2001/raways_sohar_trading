@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FOOTER_LINK_GROUPS } from "@/lib/site-content";
 
 export default function Footer() {
@@ -6,7 +7,9 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <span className="footer-logo">Rawaya Sohar Global</span>
+            <span className="footer-logo">
+              <Image src="/assets/rsg-logo.png" alt="Rawaya Sohar Global" width={1254} height={1254} />
+            </span>
             <p className="footer-tagline">
               A premier Omani enterprise providing multi-sector import, export,
               distribution, logistics, import-export, and contracting services across food,

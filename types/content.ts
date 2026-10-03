@@ -15,6 +15,8 @@ export interface Pillar {
 }
 
 export interface ProductCard {
+  /** Anchor id so other pages can link straight to this card (e.g. /products#foodstuff). */
+  id: string;
   iconSrc: string;
   iconAlt: string;
   iconWidth: number;
@@ -27,6 +29,8 @@ export interface ProductCard {
 }
 
 export interface ServiceItem {
+  /** Anchor id so other pages can link straight to this item (e.g. /services#logistics). */
+  id: string;
   title: string;
   description: string;
 }

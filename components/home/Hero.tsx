@@ -32,12 +32,8 @@ export default function Hero() {
             from strategic offices in Maabilah, Muscat, and Sohar.
           </p>
           <div className="hero-actions">
-            <a href="#products" className="btn-primary">
-              Explore Divisions
-            </a>
-            <a href="#contact" className="btn-outline">
-              Contact Us
-            </a>
+            <a className="btn-primary" href="/contact">Request a Quote</a>
+            <a className="btn-outline" href="/products">Explore Divisions</a>
           </div>
         </div>
       </div>

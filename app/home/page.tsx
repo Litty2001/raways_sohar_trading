@@ -18,6 +18,7 @@ export const metadata: Metadata = {
       "A reliable bridge between international supply chains and local market demands, delivering import, export, distribution, and contracting services from strategic offices in Maabilah, Muscat, and Sohar.",
     url: "/home",
     type: "website",
+    
   },
 };
 

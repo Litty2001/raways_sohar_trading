@@ -21,8 +21,10 @@ export default function HomeShell({ children }: { children: ReactNode }) {
 
     const sections = host.querySelectorAll<HTMLElement>("section[id]");
     const links = host.querySelectorAll<HTMLElement>(".nav-links a");
+    const navigation = host.querySelector<HTMLElement>(".site-nav");
 
     const scrollListener = () => {
+      navigation?.classList.toggle("is-scrolled", window.scrollY > 24);
       let current = "";
 
       sections.forEach((section) => {
@@ -39,31 +41,45 @@ export default function HomeShell({ children }: { children: ReactNode }) {
       });
     };
 
-    window.addEventListener("scroll", scrollListener);
+    window.addEventListener("scroll", scrollListener, { passive: true });
+    scrollListener();
 
+    // Scroll reveal: elements fade/slide in once as they enter the viewport. Siblings are
+    // staggered so rows of cards cascade. Skipped entirely for reduced-motion users, and
+    // the hero is excluded because it has its own load-in animation in home.scss.
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            target.style.opacity = "1";
-            target.style.transform = "translateY(0)";
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
 
-    const revealTargets = host.querySelectorAll<HTMLElement>(
-      ".pillar, .service-item, .why-item, .product-card"
-    );
+    if (!prefersReducedMotion) {
+      const revealTargets = host.querySelectorAll<HTMLElement>(
+        [
+          ".section-tag", ".section-title", ".why-title", ".contact-info-title",
+          ".about-text > p", ".why-desc", ".contact-info-desc", ".gallery-intro p", ".services-intro p",
+          ".careers-copy", ".gold-divider", ".about-photo", ".contact-form-wrap", ".contact-detail",
+          ".pillar", ".product-card", ".service-item", ".why-item", ".gallery-image",
+          ".footer-grid > *",
+        ].join(", ")
+      );
 
-    revealTargets.forEach((element) => {
-      element.style.opacity = "0";
-      element.style.transform = "translateY(20px)";
-      element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-      observer.observe(element);
-    });
+      revealTargets.forEach((element) => {
+        if (element.closest(".hero-section")) return;
+        const siblings = element.parentElement ? Array.from(element.parentElement.children) : [];
+        const index = Math.min(Math.max(siblings.indexOf(element), 0), 5);
+        element.style.setProperty("--reveal-delay", `${index * 90}ms`);
+        element.classList.add("reveal");
+        observer.observe(element);
+      });
+    }
 
     return () => {
       window.removeEventListener("scroll", scrollListener);

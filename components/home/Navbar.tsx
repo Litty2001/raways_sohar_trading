@@ -43,10 +43,10 @@ export default function Navbar() {
       <a href="/home" className="nav-logo">
         <span className="logo-mark">
           <Image
-            src="/assets/rawaya-nav-logo-full.png"
-            alt="Rawaya logo"
-            width={1700}
-            height={925}
+            src="/assets/rsg-logo.png"
+            alt="Rawaya Sohar Global logo"
+            width={1254}
+            height={1254}
             style={{ width: "100%", height: "100%", objectFit: "contain" }}
             priority
           />

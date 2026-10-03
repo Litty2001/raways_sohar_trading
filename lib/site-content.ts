@@ -48,6 +48,7 @@ export const ABOUT_PILLARS: Pillar[] = [
 
 export const PRODUCT_CARDS: ProductCard[] = [
   {
+    id: "foodstuff",
     iconSrc: "/assets/quality-food-products.png",
     iconAlt: "Quality Food Products logo",
     iconWidth: 300,
@@ -64,6 +65,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
     ],
   },
   {
+    id: "building-materials",
     iconSrc: "/assets/infrastructure-project-supply.png",
     iconAlt: "Infrastructure project supply",
     iconWidth: 315,
@@ -76,6 +78,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
     list: ["Plywood and whitewood", "Glues, steel, and silica sand", "Construction machinery and power tools"],
   },
   {
+    id: "power-fuel",
     iconSrc: "/assets/generators-compressors-diesel.png",
     iconAlt: "Generators, compressors, and diesel",
     iconWidth: 335,
@@ -88,6 +91,7 @@ export const PRODUCT_CARDS: ProductCard[] = [
     list: ["Generators", "Air compressors", "Diesel fuel"],
   },
   {
+    id: "trade-logistics",
     iconSrc: "/assets/trade-logistics-execution.png",
     iconAlt: "Trade and logistics execution",
     iconWidth: 370,
@@ -102,21 +106,25 @@ export const PRODUCT_CARDS: ProductCard[] = [
 
 export const SERVICES: ServiceItem[] = [
   {
+    id: "import-export-distribution",
     title: "Import, Export & Distribution",
     description:
       "Coordinating international sourcing and local distribution for essential commercial sectors.",
   },
   {
+    id: "procurement",
     title: "Procurement Optimization",
     description:
       "Improving sourcing reliability and value through strategic supply chain management.",
   },
   {
+    id: "project-supply",
     title: "Project Supply Management",
     description:
       "Managing materials, machinery, generators, and energy products for commercial project needs.",
   },
   {
+    id: "logistics",
     title: "Logistics, Import & Export",
     description:
       "Supporting logistics, cross-border trading, contracting services, and dependable execution across markets.",
@@ -183,21 +191,21 @@ export const FOOTER_LINK_GROUPS: FooterLinkGroup[] = [
   {
     title: "Divisions",
     links: [
-      { href: "/products", label: "Foodstuff" },
-      { href: "/products", label: "Building Materials" },
-      { href: "/products", label: "Power Tools" },
-      { href: "/products", label: "Construction Equipment" },
-      { href: "/products", label: "Power & Fuel Solutions" },
+      { href: "/products#foodstuff", label: "Foodstuff" },
+      { href: "/products#building-materials", label: "Building Materials" },
+      { href: "/products#building-materials", label: "Power Tools" },
+      { href: "/products#building-materials", label: "Construction Equipment" },
+      { href: "/products#power-fuel", label: "Power & Fuel Solutions" },
     ],
   },
   {
     title: "Services",
     links: [
-      { href: "/services", label: "Logistics" },
-      { href: "/services", label: "Import & Export" },
-      { href: "/services", label: "Distribution" },
-      { href: "/services", label: "Project Supply" },
-      { href: "/services", label: "Contracting" },
+      { href: "/services#logistics", label: "Logistics" },
+      { href: "/services#import-export-distribution", label: "Import & Export" },
+      { href: "/services#import-export-distribution", label: "Distribution" },
+      { href: "/services#project-supply", label: "Project Supply" },
+      { href: "/services#logistics", label: "Contracting" },
     ],
   },
 ];

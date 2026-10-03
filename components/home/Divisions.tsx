@@ -16,7 +16,7 @@ export default function Divisions() {
 
         <div className="products-grid">
           {PRODUCT_CARDS.map((product) => (
-            <article className="product-card" key={product.name}>
+            <article className="product-card" id={product.id} key={product.id}>
               <div className={`product-icon ${product.iconClassName}`}>
                 <Image
                   src={product.iconSrc}
