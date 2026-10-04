@@ -11,7 +11,7 @@ export default function Careers() {
             We welcome ambitious people who value dependable execution, strong partnerships,
             and meaningful work across Oman&apos;s trade, supply, and contracting sectors.
           </p>
-          <a className="btn-primary" href="mailto:info@rawayssohar.com?subject=Career%20enquiry">
+          <a className="btn-primary" href="mailto:info@rawayasohar.com?subject=Career%20enquiry">
             Send your CV
           </a>
         </div>

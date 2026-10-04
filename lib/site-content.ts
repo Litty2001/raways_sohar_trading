@@ -155,10 +155,10 @@ export const WHY_ITEMS: WhyItem[] = [
 ];
 
 export const CONTACT_DETAILS: ContactDetail[] = [
-  { icon: "L", label: "Location", value: "Maabilah, Muscat & Sohar, Sultanate of Oman" },
-  { icon: "P", label: "Phone", value: "+968 XXXXXXXX" },
-  { icon: "E", label: "Email", value: "info@rawayssohar.com" },
-  { icon: "H", label: "Working Hours", value: "Sun - Thu: 8:00 AM - 6:00 PM" },
+  { icon: "L", label: "Location", value: "Maabilah, Muscat, Sultanate of Oman" },
+  { icon: "P", label: "Phone", value: "+968 77121681" },
+  { icon: "E", label: "Email", value: "rawayasohar@gmail.com | info@rawayasohar.com" },
+  { icon: "H", label: "Working Hours", value: "Saturday - Thursday: 9:00 AM - 5:00 PM" },
 ];
 
 export const SERVICE_INTEREST_OPTIONS: SelectOption[] = [
